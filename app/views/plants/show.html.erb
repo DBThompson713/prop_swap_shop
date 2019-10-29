@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @plant.name %>
+</p>
+
+<p>
+  <strong>Proper name:</strong>
+  <%= @plant.proper_name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @plant.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @plant.description %>
+</p>
+
+<p>
+  <strong>Plant type:</strong>
+  <%= @plant.plant_type %>
+</p>
+
+<p>
+  <strong>Sold:</strong>
+  <%= @plant.sold %>
+</p>
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>

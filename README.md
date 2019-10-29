@@ -33,7 +33,6 @@
 <ul>
 <li>As a stretch goal, incorporating an Auspost API to calculate the shipping for each sale as well as forcing only express shipping will ensure that costs and methods are standardised. It will also ensure that sellers are not "ripping off" buyers through exorbitant shipping costs.</li>
 </ul>
-<li></li>
 
 </ol>
 

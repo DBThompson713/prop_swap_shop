@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  proper_name: MyString
+  price: 1
+  description: MyText
+  plant_type: MyString
+  sold: false
+
+two:
+  name: MyString
+  proper_name: MyString
+  price: 1
+  description: MyText
+  plant_type: MyString
+  sold: false
