@@ -1,4 +1,4 @@
-<title>PropSwap Shop</title>
+
 <h1>PropSwap Shop</h1>
 <h5>Dale Thompson</h5>
 <p>Completed for Coderacademy - October 2019</p>
