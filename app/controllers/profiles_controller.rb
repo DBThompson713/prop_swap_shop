@@ -24,11 +24,13 @@ class ProfilesController < ApplicationController
   # POST /profiles
   # POST /profiles.json
   def create
-    @profile = Profile.new(profile_params)
+
+    @user = User.find(current_user.id)
+    @profile = @user.create_profile(profile_params)
 
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
+        format.html { redirect_to @profile, notice: 'Welcome to the PropSwap Shop!' }
         format.json { render :show, status: :created, location: @profile }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class ProfilesController < ApplicationController
   def update
     respond_to do |format|
       if @profile.update(profile_params)
-        format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
+        format.html { redirect_to @profile, notice: 'Your profile has been updated.' }
         format.json { render :show, status: :ok, location: @profile }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class ProfilesController < ApplicationController
   def destroy
     @profile.destroy
     respond_to do |format|
-      format.html { redirect_to profiles_url, notice: 'Profile was successfully destroyed.' }
+      format.html { redirect_to profiles_url, notice: 'We are sad to see you go!' }
       format.json { head :no_content }
     end
   end
