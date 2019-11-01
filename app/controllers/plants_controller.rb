@@ -68,8 +68,22 @@ class PlantsController < ApplicationController
       @plant = Plant.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+# -- WHITE LISTING SECTION -- 
+    
+    # goin to need to add in support for AWS S3 -- active storage is already installed and just needs config. 
+
+    # Set :sold to TRUE -- mutatable
+
+
     def plant_params
       params.require(:plant).permit(:name, :proper_name, :price, :description, :plant_type, :sold)
     end
+
+    def set_user_plant
+      @milkshake = current_user.plants.find_by_id(params[:id])
+
+      if @plant == nil
+          redirect_to plants_path
+      end
+  end
 end

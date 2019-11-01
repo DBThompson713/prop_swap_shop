@@ -24,6 +24,13 @@
   <strong>Plant type:</strong>
   <%= @plant.plant_type %>
 </p>
+  <% if user_signed_in? %> 
+  <%= link_to "logout", destroy_user_session_path, method: :delete %>
+  <% else %>
+  <%= link_to "Login", new_user_session_path %>
+  <% end %>
+
+
 <!--
 <p>
   <strong>Sold:</strong>
