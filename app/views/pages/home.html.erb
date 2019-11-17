@@ -2,7 +2,12 @@
 
     <ul class="navbar">
     <li><a href="../plants"> Buy</a></li>
-    <li><a href="../profiles">My Account</a></li>
+    <% if user_signed_in? %> 
+    <%= link_to "profile", profile_path(current_user.id)%>
+    <% else %>
+  <%= link_to "Login", new_user_session_path %>
+  <% end %>
+
     
   
     

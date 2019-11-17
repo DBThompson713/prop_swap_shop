@@ -1,7 +1,30 @@
 <p id="notice"><%= notice %></p>
 
+<ul class="navbar">
+    <li><a href="../plants"> Buy</a></li>
+    <li><a href="../profiles">My Account</a></li>
+    
+  
+    
+    <li><a href="../plants/new">Sell</a></li>
+    </ul>
+
 <h1>Plants</h1>
 
+<section>
+        <% @plants.each do |plant| %>
+            <%= link_to(plant) do %>
+                <div>
+                  
+                    <h2><%= plant.name %></h2>
+                    <p><%= plant.plant_type %></p>
+                    <p><%= number_to_currency(plant.price / 100.0) %></p>
+                </div>
+            <% end %>
+        <% end %>
+    </section>
+
+<!--
 <table>
   <thead>
     <tr>
@@ -16,19 +39,25 @@
   </thead>
 
   <tbody>
+
+-->
+
+
+
+    <!--
     <% @plants.each do |plant| %>
       <tr>
         <td><%= plant.name %></td>
         <td><%= plant.proper_name %></td>
         <td><%= plant.price %></td>
         <td><%= plant.description %></td>
-        <td><%= plant.plant_type %></td>
-       <!-- <td><%= plant.sold %></td> -->
+        <td><%= plant.plant_type %></td>-->
+       <!-- <td><%= plant.sold %></td> 
         <td><%= link_to 'Show', plant %></td>
         <!--<td><%= link_to 'Edit', edit_plant_path(plant) %></td>
-        <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <% end %> -->
   </tbody>
 </table>
   

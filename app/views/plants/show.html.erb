@@ -1,6 +1,14 @@
 <p id="notice"><%= notice %></p>
+<ul class="navbar">
+    <li><a href="../plants"> Buy</a></li>
+    <li><a href="../profiles">My Account</a></li>
+    
+  
+    
+    <li><a href="../plants/new">Sell</a></li>
+    </ul>
 
-<%= link_to "edit", edit_plant_path(@plant) if current_user.id == @plant.user_id %>
+
 
 <p>
   <strong>Name:</strong>
@@ -28,13 +36,7 @@
 </p>
   
   
-  <div class="sign_out">
-  <% if user_signed_in? %> 
-  <%= link_to "logout", destroy_user_session_path, method: :delete %>
-  <% else %>
-  <%= link_to "Login", new_user_session_path %>
-  <% end %>
-</div>
+  
 
 
 <!--
@@ -47,3 +49,11 @@
 <%= link_to 'Edit', edit_plant_path(@plant) %> |
 -->
 <%= link_to 'Back', plants_path %>
+
+<div class="sign_out">
+  <% if user_signed_in? %> 
+  <%= link_to "logout", destroy_user_session_path, method: :delete %>
+  <% else %>
+  <%= link_to "Login", new_user_session_path %>
+  <% end %>
+</div>
