@@ -1,18 +1,7 @@
 <main id="home">
 
-    <ul class="navbar">
-    <li><a href="../plants"> Buy</a></li>
-    <% if user_signed_in? %> 
-    <%= link_to "profile", profile_path(current_user.id)%>
-    <% else %>
-  <%= link_to "Login", new_user_session_path %>
-  <% end %>
 
     
-  
-    
-    <li><a href="../plants/new">Sell</a></li>
-    </ul>
 <hr>
    
 <div class="logo">
