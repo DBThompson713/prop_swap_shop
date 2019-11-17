@@ -1,7 +1,5 @@
 <main id="home">
-<div class="logo">
-<h1>PropSwap shop</h1>
-</div>
+
     <ul class="navbar">
     <li><a href="../plants"> Buy</a></li>
     <li><a href="../profiles">My Account</a></li>
@@ -12,17 +10,19 @@
     </ul>
 <hr>
    
-
+<div class="logo">
+<h1>PropSwap shop</h1>
+</div>
     <h1>
        Featured
     </h1>
-
+<div class="sign_out">
   <% if user_signed_in? %> 
   <%= link_to "logout", destroy_user_session_path, method: :delete %>
   <% else %>
   <%= link_to "Login", new_user_session_path %>
   <% end %>
-
+</div>
 
 
     <p>

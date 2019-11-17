@@ -19,6 +19,19 @@ html {
   margin: 0;
   width: 100vw;
   height: 100vh;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+table {
+  margin: auto;
+}
+.sign_out {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  margin-top: 5rem;
 }
 
 #home {
@@ -41,3 +54,16 @@ html {
   justify-content: space-around;
   padding-left: 0;
 }
+
+.signup_form1 {
+  text-align: center;
+  background: rgb(184, 178, 178);
+  width: 55%;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+/* 
+.signup_form1 .field {
+  width: 70%;
+} */

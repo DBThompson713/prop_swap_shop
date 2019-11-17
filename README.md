@@ -1,9 +1,9 @@
 
-<h1>PropSwap Shop</h1>
+<h1><strong>PropSwap Shop</strong></h1>
 <h5>Dale Thompson</h5>
 <p>Completed for Coderacademy - October 2019</p>
 <hr>
-<h3>Purpose</h3>
+<h3><strong>Purpose</strong></h3>
 <p>In the Australian market, there is not currently a dedicated online  marketplace for individuals to buy and sell plants, props and plant cuttings.</p>
 <p>If a person wants to sell or buy plants online, barring setting up an online store, the only options are gumtree or ebay. Neither of which are set up to handle the specific intricacies of shipping and handling plants. Furthermore, with gumtree, you never know who you are dealing with, the quality of the product, and lastly there is no easy recourse for correction in the event that something goes wrong</p>
 <p>Propswap Shop will fill the gap which currently exists in the niche market of plant, prop and cutting - user to user sales.</p>
@@ -13,7 +13,7 @@
 <!-- POTENTIAL ISSUES AND SOLUTIONS -->
 
 <br/>
-<h3>Potential issues - Possible solutions</h3>
+<h5>Potential issues - Possible solutions</h5>
 <ol>
 <li><strong>Australia has strict bio-protection laws - even between states</strong></li>
 <ul>
@@ -37,3 +37,31 @@
 </ol>
 
 <!-- NEXT SECTION -->
+
+<h3><strong>Tech stack</strong></h3>
+<ul>
+ <li>Ruby on Rails</li>
+ <li>HTML && CSS</li>
+ <li>Amazon AWS S3</li>
+ <li>Stripe</li>
+</ul>
+
+<h3><strong>Site map</strong></h3>
+
+<img src="./app/assets/images/propswap_sitemap.jpg">
+
+<h3><strong>Trello Board</strong></h3>
+<img src="./app/assets/images/propswap_trello.png">
+
+<h3><strong>Database Entity Relationship Diagram (ERD)</strong></h3>
+
+<img src="./app/assets/images/Propswap_ERD.jpg">
+
+<h3><strong>Wireframes</strong></h3>
+
+<img src="./app/assets/images/wireframes/sign up, plant page, purchase.png">
+<img src="./app/assets/images/wireframes/Sign up - Desktop.png">
+<img src="./app/assets/images/wireframes/Landing Page and login page.png">
+<img src="./app/assets/images/wireframes/Landing page - Desktop.png">
+<img src="./app/assets/images/wireframes/How it works, Edit.png">
+<img src="./app/assets/images/wireframes/My Account - Desktop.png">

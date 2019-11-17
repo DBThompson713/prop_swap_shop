@@ -11,6 +11,45 @@ class PlantsController < ApplicationController
   # GET /plants/1
   # GET /plants/1.json
   def show
+
+
+    
+# -----START OF STRIPE CODE ---
+
+
+
+# ---------------------- REGENERATE THE THE STRIPE API KEYS
+
+
+
+    # session = Stripe::Checkout::Session.create(
+    #         payment_method_types: ["card"],
+    #         customer_email: current_user.email,
+    #         line_items: [
+    #             {
+    #                 name: @plant.name,
+    #                 description: @plant.description,
+    #                 amount: @plant.price,
+    #                 currency: "aud",
+    #                 quantity: 1
+    #             }
+    #         ],
+    #         payment_intent_data: {
+    #             metadata: {
+    #                 user_id: current_user.id,
+    #                 plant_id: @plant.id
+    #             }
+    #         },
+    #         success_url: "#{root_url}payment/success?userId=#{current_user.id}&plantId=#{@plant.id}",
+    #         cancel_url: "#{root_url}plant/#{@plant.id}"
+    #     )
+
+    #     @session_id = session.id
+    #     @public_key = Rails.application.credentials.dig(:stripe, :public_key)
+
+
+
+
   end
 
   # GET /plants/new
@@ -70,9 +109,10 @@ class PlantsController < ApplicationController
 
 # -- WHITE LISTING SECTION -- 
     
-    # goin to need to add in support for AWS S3 -- active storage is already installed and just needs config. 
+    # ADD support for AWS S3  for photo storage -- active storage is already installed and just needs config. 
+    # UPDATE permit to include image from AWS
 
-    # Set :sold to TRUE -- mutatable
+    # Set :sold to FALSE perma -- mutatable
 
 
     def plant_params
@@ -80,7 +120,7 @@ class PlantsController < ApplicationController
     end
 
     def set_user_plant
-      @milkshake = current_user.plants.find_by_id(params[:id])
+      @plant = current_user.plants.find_by_id(params[:id])
 
       if @plant == nil
           redirect_to plants_path

@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to "edit", edit_plant_path(@plant) if current_user.id == @plant.user_id %>
+
 <p>
   <strong>Name:</strong>
   <%= @plant.name %>
@@ -24,11 +26,15 @@
   <strong>Plant type:</strong>
   <%= @plant.plant_type %>
 </p>
+  
+  
+  <div class="sign_out">
   <% if user_signed_in? %> 
   <%= link_to "logout", destroy_user_session_path, method: :delete %>
   <% else %>
   <%= link_to "Login", new_user_session_path %>
   <% end %>
+</div>
 
 
 <!--
