@@ -22,6 +22,10 @@ html {
   text-align: center;
   align-content: center;
   justify-content: center;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 table {
@@ -41,10 +45,37 @@ table {
 }
 
 .logo {
-  background: red;
-  height: 12vh;
+  background-image: url(propswap_logo_temp.jpg);
+  background-size: cover;
+  background-repeat: none;
+  height: 25%;
   width: 100%;
-  align-self: center;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-words {
+  color: #fff;
+  top: 10%;
+  text-shadow: 2px 2px #000;
+  font-size: 4.5em;
+}
+
+.sign-up-main {
+  background-image: url(sign-up.jpg);
+  background-size: cover;
+  border-radius: 20px;
+  height: 300px;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  font-size: 2em;
+  text-shadow: 2px 2px #fff;
 }
 
 .navbar {
@@ -52,7 +83,6 @@ table {
   flex-direction: row;
   display: flex;
   justify-content: space-around;
-  padding-left: 0;
 }
 
 .signup_form1 {
@@ -67,3 +97,30 @@ table {
 .signup_form1 .field {
   width: 70%;
 } */
+
+/* PLANT SECTION */
+
+.showing-all-plants {
+  width: 80vw;
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+}
+.individual-plant-show-all {
+  padding: 20px;
+  width: 200px;
+}
+
+.plant-show {
+  width: 80%;
+  padding: 10px 10px 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: #c2c4c0;
+}
+
+.plant-show-pic {
+  height: 22%;
+  width: 30%;
+}

@@ -1,15 +1,10 @@
 <p id="notice"><%= notice %></p>
-<ul class="navbar">
-    <li><a href="../plants"> Buy</a></li>
-    <li><a href="../profiles">My Account</a></li>
-    
-  
-    
-    <li><a href="../plants/new">Sell</a></li>
-    </ul>
 
+<div class="plant-show">
 
-
+<p>
+  <img src="https://images.pexels.com/photos/1022922/pexels-photo-1022922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="plant-show-pic">
+</p>
 <p>
   <strong>Name:</strong>
   <%= @plant.name %>
@@ -22,7 +17,8 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @plant.price %>
+  
+  <%= number_to_currency(@plant.price / 100.0) %>
 </p>
 
 <p>
@@ -35,8 +31,9 @@
   <%= @plant.plant_type %>
 </p>
   
+  <button class="buy-now" src="#">Buy now</button>
   
-  
+ </div> 
 
 
 <!--
@@ -50,10 +47,4 @@
 -->
 <%= link_to 'Back', plants_path %>
 
-<div class="sign_out">
-  <% if user_signed_in? %> 
-  <%= link_to "logout", destroy_user_session_path, method: :delete %>
-  <% else %>
-  <%= link_to "Login", new_user_session_path %>
-  <% end %>
-</div>
+

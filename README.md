@@ -36,7 +36,7 @@
 
 </ol>
 
-<!-- NEXT SECTION -->
+<!-- BASIC SITE INFORMATION -- TECH STACK, SITE MAP, TRELLO BOARD, ERD, WIREFRAMES -->
 
 <h3><strong>Tech stack</strong></h3>
 <ul>
@@ -65,3 +65,4 @@
 <img src="./app/assets/images/wireframes/Landing page - Desktop.png">
 <img src="./app/assets/images/wireframes/How it works, Edit.png">
 <img src="./app/assets/images/wireframes/My Account - Desktop.png">
+

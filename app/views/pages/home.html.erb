@@ -1,15 +1,30 @@
 <main id="home">
 
 
+    <section>
+    
     
 <hr>
-   
-<div class="logo">
-<h1>PropSwap shop</h1>
-</div>
+    <div class="sign-up-main">
+    <h1>How it works</h1>
+    
+    </div>
     <h1>
        Featured
     </h1>
+    
+<section class="showing-all-plants">
+        <% @plants.each do |plant| %>
+            <%= link_to(plant) do %>
+                <div class="individual-plant-show-all">
+                    <h2><%= plant.name %></h2>
+                    <p><%= plant.plant_type %></p>
+                </div>
+            <% end %>
+        <% end %>
+    </section>
+
+
 <div class="sign_out">
   <% if user_signed_in? %> 
   <%= link_to "logout", destroy_user_session_path, method: :delete %>
@@ -22,4 +37,5 @@
     <p>
         
     <p>
+    </section>
 </main>
