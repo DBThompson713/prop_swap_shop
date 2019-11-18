@@ -14,38 +14,34 @@ class PlantsController < ApplicationController
 
 
     
-# -----START OF STRIPE CODE ---
 
 
 
-# ---------------------- REGENERATE THE THE STRIPE API KEYS
 
+    session = Stripe::Checkout::Session.create(
+            payment_method_types: ["card"],
+            customer_email: current_user.email,
+            line_items: [
+                {
+                    name: @plant.name,
+                    description: @plant.description,
+                    amount: @plant.price,
+                    currency: "aud",
+                    quantity: 1
+                }
+            ],
+            payment_intent_data: {
+                metadata: {
+                    user_id: current_user.id,
+                    plant_id: @plant.id
+                }
+            },
+            success_url: "#{root_url}payment/success?userId=#{current_user.id}&plantId=#{@plant.id}",
+            cancel_url: "#{root_url}plant/#{@plant.id}"
+        )
 
-
-    # session = Stripe::Checkout::Session.create(
-    #         payment_method_types: ["card"],
-    #         customer_email: current_user.email,
-    #         line_items: [
-    #             {
-    #                 name: @plant.name,
-    #                 description: @plant.description,
-    #                 amount: @plant.price,
-    #                 currency: "aud",
-    #                 quantity: 1
-    #             }
-    #         ],
-    #         payment_intent_data: {
-    #             metadata: {
-    #                 user_id: current_user.id,
-    #                 plant_id: @plant.id
-    #             }
-    #         },
-    #         success_url: "#{root_url}payment/success?userId=#{current_user.id}&plantId=#{@plant.id}",
-    #         cancel_url: "#{root_url}plant/#{@plant.id}"
-    #     )
-
-    #     @session_id = session.id
-    #     @public_key = Rails.application.credentials.dig(:stripe, :public_key)
+        @session_id = session.id
+        @public_key = Rails.application.credentials.dig(:stripe, :public_key)
 
 
 
