@@ -10,8 +10,9 @@
       </ul>
     </div>
   <% end %>
+  <h1>Create a New Swap</h1>
 <div class="plant-form">
-<h1>Create a New Swap</h1>
+
   <div class="field">
     <%= form.text_field :name ,  placeholder: "Name", required: true %>
     
@@ -25,7 +26,7 @@
    
 
   <%= form.select :plant_type, ['Succulent', 'Cactus'], required: true  %>
-   <%= form.number_field :price,  placeholder: "Price in cents", required: true  %>
+   <%= form.number_field :price,  placeholder: "Price", required: true  %>
  
   </div>
 

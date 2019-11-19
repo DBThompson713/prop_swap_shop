@@ -147,7 +147,7 @@ table {
 .individual-plant-show-all {
   padding: 20px;
   width: 200px;
-  margin: 0 20px;
+  margin: 10px 20px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.95);
 }
@@ -302,6 +302,13 @@ table {
   border-radius: 5%;
   border: 1px solid #d1cfc3;
   margin-bottom: 10px;
+  align-items: center;
+}
+
+.edit-profile-pic img {
+  height: 50px;
+  width: 50px;
+  margin: 0 15px;
 }
 
 .update-profile-button {

@@ -32,6 +32,9 @@
     <%= form.number_field :post_code,  placeholder: "Post Code" , required: true %>
   </div>
   <div class="profile-choose-photo">
+  <div class="edit-profile-pic">
+  <%= image_tag @profile.picture if @profile.picture.attached? %>
+  </div>
   <%= form.label :picture %>: <%= form.file_field :picture, accept:
   'image/png,image/gif,image/jpeg,image/jpg' , required: true %>
 </div>

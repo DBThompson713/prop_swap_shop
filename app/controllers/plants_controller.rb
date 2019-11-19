@@ -49,6 +49,7 @@ class PlantsController < ApplicationController
   # POST /plants
   # POST /plants.json
   def create
+    params[:plant][:price] = ((params[:plant][:price]).to_f * 100).to_i 
     @plant = Plant.new(plant_params)
 
     respond_to do |format|

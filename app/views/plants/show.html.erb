@@ -1,5 +1,8 @@
 <div class="plant-show">
+<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 
+    <%= yield %>
 <p>
   <div class="plant-show-pic-ind">
   <a href="<%= rails_blob_url(@plant.picture) %>" target="__blank">
