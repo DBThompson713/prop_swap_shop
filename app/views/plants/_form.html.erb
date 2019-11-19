@@ -10,39 +10,34 @@
       </ul>
     </div>
   <% end %>
-
+<div class="plant-form">
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name ,  placeholder: "Name"%>
+    
   </div>
 
   <div class="field">
-    <%= form.label :proper_name %>
-    <%= form.text_field :proper_name %>
+    <%= form.text_field :proper_name,  placeholder: "Proper name" %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
+   
+
+  <%= form.select :plant_type, ['Succulent', 'Cactus'] %>
+   <%= form.number_field :price,  placeholder: "Price" %>
+  <!--
+    <%= form.text_field :plant_type,  placeholder: "Plant Type" , :cols => 30, :rows => 10 %>-->
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
 
   <div class="field">
-    <%= form.label :plant_type %>
-    <%= form.text_field :plant_type %>
+    <%= form.text_area :description,  placeholder: "Description" %>
   </div>
 
-<!--
-  <div class="field">
-    <%= form.label :sold %>
-    <%= form.check_box :sold %>
-  </div>
--->
+  
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit id: 'plant_submit_button' %>
   </div>
 <% end %>
+</div>

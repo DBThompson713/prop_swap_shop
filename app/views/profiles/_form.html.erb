@@ -10,38 +10,29 @@
       </ul>
     </div>
   <% end %>
-
+<div class="plant-form">
   <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name,  placeholder: "First name" %>
   </div>
 
   <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name,  placeholder: "Last name" %>
   </div>
 
   <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
+    <%= form.text_field :address,  placeholder: "Address" %>
   </div>
 
   <div class="field">
-    <%= form.label :suburb %>
-    <%= form.text_field :suburb %>
+    <%= form.text_field :suburb,  placeholder: "Suburb" %>
   </div>
 
   <div class="field">
-    <%= form.label :post_code %>
-    <%= form.number_field :post_code %>
-  </div>
-
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state %>
+    <%= form.text_field :state ,  placeholder: "State"%>
+    <%= form.number_field :post_code,  placeholder: "Post Code" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit id: 'plant_submit_button' %>
   </div>
 <% end %>

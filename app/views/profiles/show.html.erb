@@ -1,42 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="profile-container">
+<div class="profile">
+  <div class="profile-left">
+    <img class="profile-image"src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=boy-casual-eyes-1222271.jpg&fm=jpg"/>
+  </div>
 
- 
+  <div class="profile-right">
+    <p>
+      <strong>First name:</strong>
+      <%= @profile.first_name %>
+    </p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @profile.first_name %>
-</p>
+    <p>
+      <strong>Last name:</strong>
+      <%= @profile.last_name %>
+    </p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @profile.last_name %>
-</p>
+    <p>
+      <strong>Address:</strong>
+      <%= @profile.address %>
+      <br/>
+      <%= @profile.suburb %>, <%= @profile.state %>, <%= @profile.post_code %>
+    </p>
+    <p>
+      <strong># of Swaps:</strong>
+      0
+    </p>
+  </div>
+  <break></break>
+  
+</div>
+  <p class="update-profile-button">
+  <%= link_to 'Update Profile', edit_profile_path(@profile) %> 
+  </p>
+</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @profile.address %>
-</p>
-
-<p>
-  <strong>Suburb:</strong>
-  <%= @profile.suburb %>
-</p>
-
-<p>
-  <strong>Post code:</strong>
-  <%= @profile.post_code %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @profile.state %>
-</p>
-<p>
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', root_path %>
-</p>
+<div class="login-logout">
 <% if user_signed_in? %> 
   <%= link_to "logout", destroy_user_session_path, method: :delete %>
   <% else %>
   <%= link_to "Login", new_user_session_path %>
   <% end %>
+  </div>

@@ -11,8 +11,9 @@
        Featured
     </h3>
     
+
 <section class="showing-all-plants">
-        <% @plants.each do |plant| %>
+        <% @plants.order(id: :desc).limit(3).each do |plant| %>
             <%= link_to(plant) do %>
                 <div class="individual-plant-show-all">
                     <h2><%= plant.name %></h2>

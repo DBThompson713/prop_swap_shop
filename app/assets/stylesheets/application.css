@@ -69,10 +69,6 @@ table {
   padding-left: 25%;
 }
 
-/* .nav li:last-of-type {
-  margin-right: 0;
-} */
-
 .logo {
   background-image: url(propswap_logo_temp.jpg);
   background-size: cover;
@@ -125,14 +121,6 @@ table {
   width: 100vw;
 }
 
-.signup_form1 {
-  text-align: center;
-  background: rgb(184, 178, 178);
-  width: 55%;
-  margin: 0 auto;
-  padding: 20px 0;
-  border-radius: 10px;
-}
 /* 
 .signup_form1 .field {
   width: 70%;
@@ -160,7 +148,108 @@ table {
   background: #c2c4c0;
 }
 
+.plant-form {
+  margin-top: 3rem;
+}
+
 .plant-show-pic {
   height: 22%;
   width: 30%;
+}
+
+.plant-form .field input {
+  width: 20rem;
+  height: 25px;
+  border-radius: 5px;
+}
+
+#plant_submit_button {
+  width: 10rem;
+  height: 25px;
+  border-radius: 5px;
+}
+
+#plant_description {
+  width: 20rem;
+  height: 25px;
+  border-radius: 5px;
+}
+
+#plant_plant_type {
+  width: 9rem;
+  height: 25px;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+#plant_price {
+  width: 10rem;
+}
+
+/* PROFILE SECTION */
+
+.profile-container {
+  border: 1px solid #c2c4c0;
+  border-radius: 15px;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 5%;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.profile {
+  display: flex;
+}
+
+.profile-image {
+  height: 125px;
+  width: 125px;
+  border-radius: 10px;
+}
+
+.profile-right {
+  display: flex;
+  /* align-items: flex-start; */
+  justify-content: baseline;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.profile-right p {
+  margin: 4px;
+}
+
+.login-logout {
+  position: fixed;
+  bottom: 25px;
+  left: 47%;
+}
+
+.update-profile-button {
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 100px;
+  margin: 15px auto;
+}
+
+.signup_form1 {
+  text-align: center;
+  width: 55%;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.signup_form1 .field input {
+  width: 20rem;
+  height: 25px;
+  border-radius: 5px;
+}
+
+#profile_post_code {
+  width: 9rem;
+}
+
+#profile_state {
+  width: 9rem;
+  margin-right: 1rem;
 }
