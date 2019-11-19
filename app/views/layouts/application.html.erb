@@ -10,29 +10,31 @@
     <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js' %>
   </head>
 
-  <body></body>
+  <body>
   <div class="logo">
-    
-<h1 class="logo-words">PropSwap</h1>
-</div>
+   <div class="nav">
   <ul class="navbar">
-    <li><a href="../plants"> Buy</a></li>
-    
+    <li><%= link_to "Buy", plants_path %></li>
+
+    <li>
     <% if user_signed_in? %> 
     <%= link_to "Profile", profile_path(current_user.id)%>
     <% else %>
   <%= link_to "Login", new_user_session_path %>
   <% end %>
-    <li><a href="../plants/new">Sell</a></li>
+  </li>
+  
+    <li><%= link_to "Swap", new_plant_path %></li>
     </ul>
+    </div>
     
+<h1 class="logo-words"><%= link_to "PropSwap", root_path%></h1>
+</div>
 
 <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
     <%= yield %>
-
-
 
   </body>
 </html>

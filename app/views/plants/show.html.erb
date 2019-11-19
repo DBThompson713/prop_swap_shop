@@ -15,11 +15,13 @@
   <%= @plant.proper_name %>
 </p>
 
+<!--
 <p>
   <strong>Price:</strong>
   
   <%= number_to_currency(@plant.price / 100.0) %>
 </p>
+-->
 
 <p>
   <strong>Description:</strong>
@@ -31,9 +33,23 @@
   <%= @plant.plant_type %>
 </p>
   
-  <button class="buy-now" src="#">Buy now</button>
-  
+  <div>
+    <button data-stripe="payment">Buy <%= number_to_currency(@plant.price / 100.0) %></button>
+</div>
+<%= link_to 'Back', plants_path %>
+<!--
+<%= link_to "edit", edit_plant_path(@plant) if current_user.id == @plant.id %>
+  -->
  </div> 
+ <script src="https://js.stripe.com/v3/"></script>
+ <script>
+    document.querySelector("[data-stripe='payment']").addEventListener("click", () => {
+        const stripe = Stripe("<%= @public_key %>");
+        stripe.redirectToCheckout({
+            sessionId: "<%= @session_id %>"
+        });
+    });
+</script>
 
 
 <!--
@@ -45,6 +61,6 @@
 
 <%= link_to 'Edit', edit_plant_path(@plant) %> |
 -->
-<%= link_to 'Back', plants_path %>
+
 
 

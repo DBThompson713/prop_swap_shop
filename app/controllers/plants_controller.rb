@@ -11,13 +11,6 @@ class PlantsController < ApplicationController
   # GET /plants/1
   # GET /plants/1.json
   def show
-
-
-    
-
-
-
-
     session = Stripe::Checkout::Session.create(
             payment_method_types: ["card"],
             customer_email: current_user.email,
@@ -42,10 +35,6 @@ class PlantsController < ApplicationController
 
         @session_id = session.id
         @public_key = Rails.application.credentials.dig(:stripe, :public_key)
-
-
-
-
   end
 
   # GET /plants/new
