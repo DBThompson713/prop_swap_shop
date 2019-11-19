@@ -16,6 +16,7 @@
         <% @plants.order(id: :desc).limit(3).each do |plant| %>
             <%= link_to(plant) do %>
                 <div class="individual-plant-show-all">
+                
                     <h2><%= plant.name %></h2>
                     <p><%= plant.plant_type %></p>
                 </div>

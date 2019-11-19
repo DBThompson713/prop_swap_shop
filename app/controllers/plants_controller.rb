@@ -101,7 +101,7 @@ class PlantsController < ApplicationController
 
 
     def plant_params
-      params.require(:plant).permit(:name, :proper_name, :price, :description, :plant_type, :sold)
+      params.require(:plant).permit(:name, :proper_name, :price, :description, :plant_type, :sold, :picture)
     end
 
     def set_user_plant

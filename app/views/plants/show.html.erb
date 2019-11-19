@@ -1,7 +1,9 @@
 <div class="plant-show">
 
-<p>
-  <img src="https://images.pexels.com/photos/1022922/pexels-photo-1022922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="plant-show-pic">
+<p >
+  <!--<img src="https://images.pexels.com/photos/1022922/pexels-photo-1022922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="">--><div class="plant-show-pic">
+  <%= image_tag @plant.picture if @plant.picture.attached? %>
+  </div>
 </p>
 <p>
   <strong>Name:</strong>
