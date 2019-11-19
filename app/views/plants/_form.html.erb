@@ -11,6 +11,7 @@
     </div>
   <% end %>
 <div class="plant-form">
+<h1>Create a New Swap</h1>
   <div class="field">
     <%= form.text_field :name ,  placeholder: "Name"%>
     
@@ -25,8 +26,7 @@
 
   <%= form.select :plant_type, ['Succulent', 'Cactus'] %>
    <%= form.number_field :price,  placeholder: "Price in cents" %>
-  <!--
-    <%= form.text_field :plant_type,  placeholder: "Plant Type" , :cols => 30, :rows => 10 %>-->
+ 
   </div>
 
 
@@ -34,8 +34,8 @@
     <%= form.text_area :description,  placeholder: "Description" %>
   </div>
 
-  <div>
-  <%= form.file_field :picture, accept:
+  <div class="profile-choose-photo">
+  <%= form.label :picture %>: <%= form.file_field :picture, accept:
   'image/png,image/gif,image/jpeg,image/jpg' %>
 </div>
 

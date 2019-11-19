@@ -7,19 +7,35 @@
     <h1>How it works</h1>
     
     </div>
-    <h2 id="featured">
+    <h1 id="featured">
        Featured
-    </h2>
+    </h1>
     
 
-<section class="showing-all-plants">
+<section class="showing-all-plants" >
         <% @plants.order(id: :desc).limit(3).each do |plant| %>
             <%= link_to(plant) do %>
-                <div class="individual-plant-show-all">
-                <div class="plant-show-pic">
-  <%= image_tag plant.picture if plant.picture.attached? %>
+
+
+                <div class="individual-plant-show-all" 
+                style="
+                background-image: url('<%= rails_blob_url(plant.picture) %>');
+                background-size: cover;
+                ">
+
+
+                <div class="plant-info">
+
+
+
+
+  <h3><%= plant.name %></h3>
+
+
+  <button data-stripe="payment">Buy <%= number_to_currency(plant.price / 100.0) %></button>
+  
   </div>
-                    <h3><%= plant.name %></h3>
+                    
                 </div>
             <% end %>
         <% end %>
@@ -32,3 +48,13 @@
     <p>
     </section>
 </main>
+
+<script src="https://js.stripe.com/v3/"></script>
+ <script>
+    document.querySelector("[data-stripe='payment']").addEventListener("click", () => {
+        const stripe = Stripe("<%= @public_key %>");
+        stripe.redirectToCheckout({
+            sessionId: "<%= @session_id %>"
+        });
+    });
+</script>

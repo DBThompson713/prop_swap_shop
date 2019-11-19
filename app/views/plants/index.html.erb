@@ -1,14 +1,29 @@
 <h1>Props for swapping!</h1>
 
-<section class="showing-all-plants">
-        <% @plants.each do |plant| %>
+<section class="showing-all-plants" >
+        <% @plants.order(id: :desc).limit(3).each do |plant| %>
             <%= link_to(plant) do %>
-                <div class="individual-plant-show-all">
-                <div class="plant-show-pic">
-  <%= image_tag plant.picture if plant.picture.attached? %>
+
+
+                <div class="individual-plant-show-all" 
+                style="
+                background-image: url('<%= rails_blob_url(plant.picture) %>');
+                background-size: cover;
+                ">
+
+
+                <div class="plant-info">
+
+
+
+
+  <h3><%= plant.name %></h3>
+
+
+  <button data-stripe="payment">Buy <%= number_to_currency(plant.price / 100.0) %></button>
+  
   </div>
-                    <h3><%= plant.name %></h3>
-                    <p><%= number_to_currency(plant.price / 100.0) %></p>
+                    
                 </div>
             <% end %>
         <% end %>

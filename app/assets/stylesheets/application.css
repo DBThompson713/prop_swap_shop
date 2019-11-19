@@ -26,6 +26,7 @@ html {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  background: url(propswap_logo_temp.jpg);
 }
 
 a {
@@ -34,6 +35,11 @@ a {
 a:hover {
   background: transparent;
   color: #000;
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 2px 2px #000;
 }
 
 table {
@@ -125,8 +131,7 @@ table {
   width: 100vw;
 }
 
-/* 
-.signup_form1 .field {
+/* .signup_form1 .field {
   width: 70%;
 } */
 
@@ -135,49 +140,105 @@ table {
 .showing-all-plants {
   width: 80vw;
   display: flex;
-  margin: 0 auto;
+  margin: 30px auto;
   flex-wrap: wrap;
   justify-content: center;
 }
 .individual-plant-show-all {
   padding: 20px;
   width: 200px;
+  margin: 0 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .plant-show {
-  width: 80%;
+  width: 40%;
   padding: 10px 10px 40px;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 5%;
   margin: 0 auto;
-  background: #c2c4c0;
-}
-
-.plant-form {
-  margin-top: 3rem;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .plant-show-pic img {
-  height: 22%;
-  width: 30%;
+  height: 130px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.plant-show-pic-ind img {
+  height: 30%;
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.payment-button button {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  width: 20%;
+  background: transparent;
+}
+
+.plant-info button {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.plant-form {
+  background: rgba(255, 255, 255, 0.9);
+  width: 40%;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  border-radius: 10px;
+}
+
+.plant-form h1 {
+  margin-bottom: 3rem;
+  color: black;
+  text-shadow: none;
+}
+
+.plant-form select {
+  background: #fff;
+}
+
+.plant-info {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 1x 0 1px 0;
+  text-shadow: 1px 1px #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .plant-form .field input {
   width: 20rem;
   height: 25px;
   border-radius: 5px;
+  font-size: 0.9rem;
+  padding-left: 5px;
 }
 
 #plant_submit_button {
-  width: 10rem;
+  width: 20rem;
   height: 25px;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 #plant_description {
   width: 20rem;
   height: 25px;
   border-radius: 5px;
+  font-size: 1.1rem;
 }
 
 #plant_plant_type {
@@ -199,6 +260,7 @@ table {
   margin: 0 auto;
   margin-top: 5%;
   padding: 2rem 2rem 1rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .profile {
@@ -214,7 +276,6 @@ table {
 
 .profile-right {
   display: flex;
-  /* align-items: flex-start; */
   justify-content: baseline;
   align-items: baseline;
   flex-direction: column;
@@ -228,6 +289,19 @@ table {
   position: fixed;
   bottom: 25px;
   left: 47%;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  padding: 5px;
+  width: 7rem;
+}
+.profile-choose-photo {
+  display: flex;
+  background: #fff;
+  margin: 0 auto;
+  width: 20rem;
+  border-radius: 5%;
+  border: 1px solid #d1cfc3;
+  margin-bottom: 10px;
 }
 
 .update-profile-button {
@@ -240,7 +314,7 @@ table {
 
 .signup_form1 {
   text-align: center;
-  width: 55%;
+  width: 75%;
   margin: 0 auto;
   padding: 20px 0;
   border-radius: 10px;

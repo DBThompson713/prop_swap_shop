@@ -1,10 +1,13 @@
 <div class="plant-show">
 
-<p >
-  <!--<img src="https://images.pexels.com/photos/1022922/pexels-photo-1022922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="">--><div class="plant-show-pic">
+<p>
+  <div class="plant-show-pic-ind">
+  <a href="<%= rails_blob_url(@plant.picture) %>" target="__blank">
   <%= image_tag @plant.picture if @plant.picture.attached? %>
+  </a>
   </div>
 </p>
+
 <p>
   <strong>Name:</strong>
   <%= @plant.name %>
@@ -15,13 +18,7 @@
   <%= @plant.proper_name %>
 </p>
 
-<!--
-<p>
-  <strong>Price:</strong>
-  
-  <%= number_to_currency(@plant.price / 100.0) %>
-</p>
--->
+
 
 <p>
   <strong>Description:</strong>
@@ -33,12 +30,16 @@
   <%= @plant.plant_type %>
 </p>
   
-  <div>
+  <div class="payment-button">
     <button data-stripe="payment">Buy <%= number_to_currency(@plant.price / 100.0) %></button>
 </div>
-<%= link_to 'Back', plants_path %>
+
 <!--
+
+<%= link_to 'Back', plants_path %>
+
 <%= link_to "edit", edit_plant_path(@plant) if current_user.id == @plant.id %>
+  
   -->
  </div> 
  <script src="https://js.stripe.com/v3/"></script>
@@ -50,12 +51,5 @@
         });
     });
 </script>
-
-
-<!--
-<p>
-  <strong>Sold:</strong>
-  <%= @plant.sold %>
-</p>
 
 
