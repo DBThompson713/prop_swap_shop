@@ -7,18 +7,19 @@
     <h1>How it works</h1>
     
     </div>
-    <h3 id="featured">
+    <h2 id="featured">
        Featured
-    </h3>
+    </h2>
     
 
 <section class="showing-all-plants">
         <% @plants.order(id: :desc).limit(3).each do |plant| %>
             <%= link_to(plant) do %>
                 <div class="individual-plant-show-all">
-                
-                    <h2><%= plant.name %></h2>
-                    <p><%= plant.plant_type %></p>
+                <div class="plant-show-pic">
+  <%= image_tag plant.picture if plant.picture.attached? %>
+  </div>
+                    <h3><%= plant.name %></h3>
                 </div>
             <% end %>
         <% end %>

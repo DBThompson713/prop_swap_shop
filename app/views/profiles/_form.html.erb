@@ -31,6 +31,10 @@
     <%= form.text_field :state ,  placeholder: "State"%>
     <%= form.number_field :post_code,  placeholder: "Post Code" %>
   </div>
+  <div>
+  <%= form.label :picture %> <%= form.file_field :picture, accept:
+  'image/png,image/gif,image/jpeg,image/jpg' %>
+</div>
 
   <div class="actions">
     <%= form.submit id: 'plant_submit_button' %>

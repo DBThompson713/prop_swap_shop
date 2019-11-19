@@ -1,7 +1,8 @@
 <div class="profile-container">
 <div class="profile">
   <div class="profile-left">
-    <img class="profile-image"src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=boy-casual-eyes-1222271.jpg&fm=jpg"/>
+   <%= image_tag @profile.picture if @profile.picture.attached? %>
+
   </div>
 
   <div class="profile-right">
