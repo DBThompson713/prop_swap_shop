@@ -12,28 +12,28 @@
   <% end %>
 <div class="plant-form">
   <div class="field">
-    <%= form.text_field :first_name,  placeholder: "First name" %>
+    <%= form.text_field :first_name,  placeholder: "First name", required: true  %>
   </div>
 
   <div class="field">
-    <%= form.text_field :last_name,  placeholder: "Last name" %>
+    <%= form.text_field :last_name,  placeholder: "Last name", required: true  %>
   </div>
 
   <div class="field">
-    <%= form.text_field :address,  placeholder: "Address" %>
+    <%= form.text_field :address,  placeholder: "Address", required: true  %>
   </div>
 
   <div class="field">
-    <%= form.text_field :suburb,  placeholder: "Suburb" %>
+    <%= form.text_field :suburb,  placeholder: "Suburb" , required: true %>
   </div>
 
   <div class="field">
-    <%= form.select :state, ['NSW', 'VIC'] %>
-    <%= form.number_field :post_code,  placeholder: "Post Code" %>
+    <%= form.select :state, ['NSW', 'VIC'] , required: true %>
+    <%= form.number_field :post_code,  placeholder: "Post Code" , required: true %>
   </div>
   <div class="profile-choose-photo">
   <%= form.label :picture %>: <%= form.file_field :picture, accept:
-  'image/png,image/gif,image/jpeg,image/jpg' %>
+  'image/png,image/gif,image/jpeg,image/jpg' , required: true %>
 </div>
 
   <div class="actions">

@@ -13,7 +13,7 @@
 <div class="plant-form">
 <h1>Create a New Swap</h1>
   <div class="field">
-    <%= form.text_field :name ,  placeholder: "Name"%>
+    <%= form.text_field :name ,  placeholder: "Name", required: true %>
     
   </div>
 
@@ -24,19 +24,19 @@
   <div class="field">
    
 
-  <%= form.select :plant_type, ['Succulent', 'Cactus'] %>
-   <%= form.number_field :price,  placeholder: "Price in cents" %>
+  <%= form.select :plant_type, ['Succulent', 'Cactus'], required: true  %>
+   <%= form.number_field :price,  placeholder: "Price in cents", required: true  %>
  
   </div>
 
 
   <div class="field">
-    <%= form.text_area :description,  placeholder: "Description" %>
+    <%= form.text_area :description,  placeholder: "Description", required: true %>
   </div>
 
   <div class="profile-choose-photo">
   <%= form.label :picture %>: <%= form.file_field :picture, accept:
-  'image/png,image/gif,image/jpeg,image/jpg' %>
+  'image/png,image/gif,image/jpeg,image/jpg', required: true %>
 </div>
 
   
