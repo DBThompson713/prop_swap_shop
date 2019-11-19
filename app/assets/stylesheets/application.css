@@ -52,6 +52,10 @@ table {
   flex-direction: column;
 }
 
+#featured {
+  margin: 20px 0 0 0;
+}
+
 .nav {
   align-self: baseline;
   width: 100%;
@@ -132,7 +136,8 @@ table {
   width: 80vw;
   display: flex;
   margin: 0 auto;
-  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .individual-plant-show-all {
   padding: 20px;
@@ -204,6 +209,7 @@ table {
   height: 125px;
   width: 125px;
   border-radius: 10px;
+  margin-right: 10px;
 }
 
 .profile-right {
@@ -229,6 +235,7 @@ table {
   border-radius: 7px;
   width: 100px;
   margin: 15px auto;
+  height: 1.5rem;
 }
 
 .signup_form1 {
@@ -252,4 +259,21 @@ table {
 #profile_state {
   width: 9rem;
   margin-right: 1rem;
+}
+
+/* STYLING FOR DEVISE */
+
+#user_email {
+  width: 20rem;
+  height: 25px;
+  border-radius: 5px;
+}
+
+#user_password {
+  width: 20rem;
+  height: 25px;
+  border-radius: 5px;
+}
+#user_remember_me {
+  margin-right: 10px;
 }
