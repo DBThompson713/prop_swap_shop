@@ -51,6 +51,8 @@ class PlantsController < ApplicationController
   def create
     params[:plant][:price] = ((params[:plant][:price]).to_f * 100).to_i 
     @plant = Plant.new(plant_params)
+    @plant.sold = false;
+    @plant.user_id = current_user.id
 
     respond_to do |format|
       if @plant.save
