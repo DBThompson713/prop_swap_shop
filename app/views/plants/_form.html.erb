@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-  <h1>Create a New Swap</h1>
+  
 <div class="plant-form">
 
   <div class="field">
@@ -36,6 +36,9 @@
   </div>
 
   <div class="profile-choose-photo">
+  <div class="edit-profile-pic">
+  <%= image_tag @plant.picture if @plant.picture.attached? %>
+  </div>
   <%= form.label :picture %>: <%= form.file_field :picture, accept:
   'image/png,image/gif,image/jpeg,image/jpg', required: true %>
 </div>

@@ -32,18 +32,21 @@
   <strong>Plant type:</strong>
   <%= @plant.plant_type %>
 </p>
+
+<p>
+  
+  <%= link_to "View Swapper's profile", profile_path(@plant.user_id)  %>
+</p>
   
   <div class="payment-button">
     <button data-stripe="payment">Buy <%= number_to_currency(@plant.price / 100.0) %></button>
 </div>
+<%= link_to "edit", edit_plant_path(@plant) if current_user.id == @plant.id %> 
 
-<!--
 
-<%= link_to 'Back', plants_path %>
 
-<%= link_to "edit", edit_plant_path(@plant) if current_user.id == @plant.id %>
-  
-  -->
+
+ 
  </div> 
  <script src="https://js.stripe.com/v3/"></script>
  <script>

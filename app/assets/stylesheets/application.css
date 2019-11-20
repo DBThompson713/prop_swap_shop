@@ -27,6 +27,7 @@ html {
   margin: 0;
   overflow-x: hidden;
   background: url(propswap_logo_temp.jpg);
+  background-repeat: no-repeat;
 }
 
 a {
@@ -76,11 +77,11 @@ table {
 }
 
 .nav li:first-of-type {
-  padding-left: 25%;
+  padding-left: 15%;
 }
 
 .logo {
-  background-image: url(propswap_logo_temp.jpg);
+  background: transparent;
   background-size: cover;
   background-repeat: none;
   height: 23%;
@@ -96,22 +97,37 @@ table {
 .logo-words {
   margin-top: 70px;
 }
+.logo-words img {
+  height: 120px;
+  width: 650px;
+}
 
 .logo-words a {
   color: #fff;
   text-shadow: 2px 2px #000;
   font-size: 3em;
   padding: 0;
-  margin-left: -250%;
+  margin-left: -200%;
+}
+
+.login-page {
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  /* background: rgba(255, 255, 255, 0.5); */
+}
+
+.login-page a {
+  color: #fff;
+  text-shadow: 2px 2px #000;
 }
 
 .sign-up-main {
-  background-image: url(sign-up.jpg);
+  background-image: url(signup3.jpg);
   background-size: cover;
   border-radius: 20px;
   height: 250px;
   width: 70%;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   display: flex;
   align-items: top;
   justify-content: center;
@@ -188,7 +204,7 @@ table {
 }
 
 .plant-form {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.85);
   width: 40%;
   padding: 10px;
   margin: 0 auto;
@@ -242,7 +258,7 @@ table {
 }
 
 #plant_plant_type {
-  width: 9rem;
+  width: 8.5rem;
   height: 25px;
   border-radius: 5px;
   margin-right: 1rem;
