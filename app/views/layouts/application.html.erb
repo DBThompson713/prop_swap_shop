@@ -4,14 +4,17 @@
     <title>PropSwap</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js' %>
   </head>
 
   <body>
+  <div class="page-top">
+  <div class="logo-words"><%= link_to image_tag("logo_update.png"), root_path%></div>
   <div class="logo">
+  
    <div class="nav">
   <ul class="navbar">
     <li><%= link_to "Buy", plants_path %></li>
@@ -28,11 +31,11 @@
     </ul>
     </div>
     
-<div class="logo-words"><%= link_to image_tag("propswap_logo.png"), root_path%></div>
+
 </div>
 
 
-
+</div>
     <%= yield %>
 
   </body>

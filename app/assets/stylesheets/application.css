@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
-
+@import url("https://fonts.googleapis.com/css?family=Oxygen&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 body,
 html {
   margin: 0;
@@ -27,9 +28,17 @@ html {
   margin: 0;
   overflow-x: hidden;
   background: url(propswap_logo_temp.jpg);
-  background-position: bottom;
+  background-size: unset;
+  background-position: top left;
   background-repeat: no-repeat;
-  background-position: left top;
+  background-attachment: fixed;
+  background-position-y: 5%;
+  background-position-x: 24%;
+  font-family: "Lato", sans-serif;
+}
+.page-top {
+  position: sticky;
+  top: 0;
 }
 
 a {
@@ -43,6 +52,34 @@ a:hover {
 h1 {
   color: #fff;
   text-shadow: 2px 2px #000;
+}
+
+h3 {
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+.white-text a {
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}
+.white-text p {
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}
+
+.success {
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  margin: 60px auto 100px auto;
+
+  line-height: 130%;
+}
+
+.success-back a {
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  font-size: 3rem;
 }
 
 .sign_out {
@@ -69,21 +106,21 @@ h1 {
   justify-content: space-around;
   font-size: 1.25em;
   margin-bottom: 20px;
-  margin-top: 5px;
+  margin-top: -10px;
   z-index: 4;
   width: 100vw;
   padding: 0;
 }
 
 .nav {
-  position: fixed;
-  top: 0;
+  /* position: fixed;
+  top: 0; */
   align-self: baseline;
   width: 100%;
   justify-content: space-around;
   /* margin-left: 20%; */
   text-shadow: 1px 1px #000;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .nav li a {
@@ -95,7 +132,7 @@ h1 {
   background: transparent;
   background-size: cover;
   background-repeat: none;
-  height: 23%;
+  /* height: 23%; */
   width: 100vw;
   margin: 0 auto;
   padding: 0;
@@ -107,21 +144,13 @@ h1 {
 }
 
 .logo-words {
-  margin-top: 20px;
-  position: fixed;
+  /* margin-top: 20px;
+  position: fixed; */
   z-index: 1;
 }
 .logo-words img {
   height: 120px;
   width: 650px;
-}
-
-.logo-words a {
-  color: #fff;
-  text-shadow: 2px 2px #000;
-  font-size: 3em;
-  padding: 0;
-  /* margin-left: -200%; */
 }
 
 .login-page {
@@ -205,10 +234,8 @@ h1 {
 }
 
 .plant-show-pic-ind img {
-  height: 30%;
-  width: 50%;
+  height: 32vh;
   border-radius: 10px;
-  border: 1px solid black;
 }
 .payment-button button {
   border: 1px solid black;
@@ -226,7 +253,7 @@ h1 {
 }
 
 .plant-form {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
   width: 40%;
   padding: 10px;
   margin: 0 auto;
@@ -292,22 +319,39 @@ h1 {
 /* PROFILE SECTION */
 
 .profile-container {
-  border: 1px solid #c2c4c0;
+  /* border: 1px solid #c2c4c0; */
   border-radius: 15px;
-  width: 30%;
+  width: 60%;
   margin: 0 auto;
   margin-top: 5%;
   padding: 2rem 2rem 1rem 2rem;
-  background: rgba(255, 255, 255, 0.9);
+  /* background: rgba(255, 255, 255, 0.9); */
+}
+
+.show-profile-link {
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}
+
+.update-profile-button {
+  margin-top: 30px;
+}
+
+.update-profile-button a {
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  width: 60%;
+  height: 1.5rem;
 }
 
 .profile {
   display: flex;
+  justify-content: space-around;
 }
 
 .profile-left img {
-  height: 125px;
-  width: 125px;
+  height: 200px;
+  width: 200px;
   border-radius: 10px;
   margin-right: 10px;
 }
@@ -317,6 +361,7 @@ h1 {
   justify-content: baseline;
   align-items: baseline;
   flex-direction: column;
+  padding-top: 10px;
 }
 
 .profile-right p {
@@ -347,14 +392,6 @@ h1 {
   height: 50px;
   width: 50px;
   margin: 0 15px;
-}
-
-.update-profile-button {
-  border: 1px solid black;
-  border-radius: 7px;
-  width: 100px;
-  margin: 15px auto;
-  height: 1.5rem;
 }
 
 .signup_form1 {
@@ -419,8 +456,14 @@ h1 {
     width: 75vw;
   }
 
+  .profile-left img {
+    height: 185px;
+    width: 185px;
+  }
+
   .plant-form {
     width: 90vw;
+    background: transparent;
   }
 
   .individual-plant-show-all {

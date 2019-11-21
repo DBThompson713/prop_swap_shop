@@ -7,35 +7,33 @@
   </div>
 
   <div class="profile-right">
-    <p>
-      <strong>First name:</strong>
-      <%= @profile.first_name %>
-    </p>
+    <h1>
+      
+      <%= @profile.first_name %> <%= @profile.last_name %>
+    </h1>
 
-    <p>
-      <strong>Last name:</strong>
-      <%= @profile.last_name %>
-    </p>
-
-    <p>
-      <strong>Address:</strong>
-      <%= @profile.address %>
-      <br/>
-      <%= @profile.suburb %>, <%= @profile.state %>, <%= @profile.post_code %>
-    </p>
-    <p>
-      <strong># of Swaps:</strong>
+    <h3>
+      <strong>State: </strong>
+      
+       <%= @profile.state %>
+    </h3>
+    <h3>
+      <strong>Swaps: </strong>
       <%= @swaps%>
   
       
-    </p>
+    </h3>
   </div>
   <break></break>
   
 </div>
-  <p class="update-profile-button">
-  <%= link_to 'Update Profile', edit_profile_path(@profile) %> 
-  </p>
+  <div class="update-profile-button">
+    <% if current_user.id == @profile.user_id %>
+      <%= link_to "Update Profile", edit_profile_path(@profile) if current_user.id == @profile.user_id %> 
+    <% else %>
+      <p>Send a message</p>
+    <% end%>
+  
 </div>
 
 <button class="login-logout">
