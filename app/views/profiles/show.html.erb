@@ -1,6 +1,7 @@
 <div class="profile-container">
 <div class="profile">
   <div class="profile-left">
+  <a href="<%= rails_blob_url(@profile.picture) %>" target="__blank">
    <%= image_tag @profile.picture if @profile.picture.attached? %>
 
   </div>
@@ -24,7 +25,9 @@
     </p>
     <p>
       <strong># of Swaps:</strong>
-      0
+      <%= @swaps%>
+  
+      
     </p>
   </div>
   <break></break>

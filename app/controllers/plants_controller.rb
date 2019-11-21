@@ -5,7 +5,7 @@ class PlantsController < ApplicationController
   # GET /plants
   # GET /plants.json
   def index
-    @plants = Plant.all
+    @plants = Plant.where(sold: false)
   end
 
   # GET /plants/1

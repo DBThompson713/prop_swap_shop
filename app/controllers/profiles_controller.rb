@@ -11,6 +11,10 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    p "**************** #{params}*********************"
+    user_id = params[:id]
+    @swaps = Plant.where(user_id: user_id, sold: false).count
+
   end
 
   # GET /profiles/new
