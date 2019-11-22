@@ -151,9 +151,12 @@ Due to time constraints I was unable to get this feature included in this versio
 <h3><strong>Model (R17)</strong></h3>
 <p>Prop Swap makes use of the following models</p>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li>plant model</li>
+<p>The plant model handles the information about the plants that are for sale. That information includes: name, proper name, price, description, plant type, sold and user_id. It has a has_one_attached :picture relationship. That picture is stored on amazon S3
+
+</ul>
+<li>profile</li>
+<li>users</li>
 <li></li>
 <li></li>
 

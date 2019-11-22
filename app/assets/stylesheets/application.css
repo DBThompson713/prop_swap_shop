@@ -109,7 +109,7 @@ h3 {
 
 footer {
   position: fixed;
-  bottom: 0px;
+  bottom: -10px;
   left: 0;
   width: 100vw;
   text-align: center;
@@ -275,6 +275,7 @@ footer a:visited {
 
 .plant-show-pic-ind img {
   height: 32vh;
+  max-width: 81vw;
   border-radius: 10px;
 }
 .payment-button button {
