@@ -10,6 +10,7 @@
       </ul>
     </div>
   <% end %>
+  <div class="profile-form">
 <div class="plant-form">
   <div class="field">
     <%= form.text_field :first_name,  placeholder: "First name", required: true  %>
@@ -41,5 +42,6 @@
 
   <div class="actions">
     <%= form.submit id: 'plant_submit_button' %>
+  </div>
   </div>
 <% end %>

@@ -183,6 +183,7 @@ footer a:visited {
   color: #fff;
   text-shadow: 2px 2px #000;
   /* background: rgba(255, 255, 255, 0.5); */
+  margin-top: 7%;
 }
 
 .login-page a {
@@ -295,11 +296,14 @@ footer a:visited {
 
 .plant-form {
   /* background: rgba(255, 255, 255, 0.08); */
-  width: 40%;
+  width: 98%;
   padding: 10px;
   margin: 0 auto;
   margin-top: 3rem;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .plant-form h1 {
@@ -362,9 +366,9 @@ footer a:visited {
 .profile-container {
   /* border: 1px solid #c2c4c0; */
   border-radius: 15px;
-  width: 60%;
+  width: 40%;
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 3%;
   padding: 2rem 2rem 1rem 2rem;
   /* background: rgba(255, 255, 255, 0.9); */
 }
@@ -444,7 +448,7 @@ footer a:visited {
 
 .signup_form1 {
   text-align: center;
-  width: 75%;
+  width: 95vw;
   margin: 0 auto;
   padding: 20px 0;
   border-radius: 10px;
@@ -492,7 +496,9 @@ footer a:visited {
     z-index: -20;
     display: none;
   }
-
+  .login-page {
+    margin-top: 20%;
+  }
   .logo-words img {
     width: 95%;
   }
@@ -505,7 +511,11 @@ footer a:visited {
   }
 
   .profile-container {
-    width: 75vw;
+    width: 80vw;
+  }
+
+  .profile-form {
+    margin-top: 15%;
   }
 
   .profile-left img {
@@ -514,8 +524,7 @@ footer a:visited {
   }
 
   .plant-form {
-    width: 90vw;
-    background: transparent;
+    margin: 0 auto;
   }
 
   .individual-plant-show-all {
