@@ -36,6 +36,10 @@ html {
   background-position-x: 24%;
   font-family: "Lato", sans-serif;
 }
+.turnDeviceNotification {
+  z-index: -20;
+  display: none;
+}
 .page-top {
   position: sticky;
   top: 0;
@@ -101,6 +105,24 @@ h3 {
 
 #featured {
   margin: 20px 0 0 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:visited {
+  color: #fff;
 }
 
 .navbar {
@@ -217,9 +239,10 @@ h3 {
 .showing-all-plants {
   width: 80vw;
   display: flex;
-  margin: 30px auto;
+  margin: 8px auto;
   flex-wrap: wrap;
   justify-content: center;
+  z-index: 10;
 }
 
 .showing-all-plants-mobile {
@@ -228,10 +251,11 @@ h3 {
 
 .individual-plant-show-all {
   padding: 20px;
-  width: 200px;
-  margin: 10px 20px;
+  width: 150px;
+  margin: 10px 10px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.95);
+  z-index: 99;
 }
 
 .plant-show {
@@ -378,7 +402,13 @@ h3 {
   justify-content: baseline;
   align-items: baseline;
   flex-direction: column;
-  padding-top: 10px;
+}
+.profile-right h1 {
+  line-height: 100%;
+}
+
+.profile-right h3 {
+  margin: 10px auto;
 }
 
 .profile-right p {
@@ -386,9 +416,9 @@ h3 {
 }
 
 .login-logout {
-  position: fixed;
-  bottom: 25px;
-  left: 47%;
+  position: relative;
+  top: 35px;
+  text-align: center;
   border-radius: 10px;
   font-size: 1.15rem;
   padding: 5px;
@@ -453,9 +483,13 @@ h3 {
 
 /* ------------------RESPONSIVE STYLING */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   body {
     background-position: center top;
+  }
+  .turnDeviceNotification {
+    z-index: -20;
+    display: none;
   }
 
   .logo-words img {
@@ -490,20 +524,12 @@ h3 {
     margin-right: 7px;
   }
 
-  .sign-up-main {
-    width: 100vw;
-  }
-
   .plant-show {
     width: 90vw;
   }
 
   .login-logout {
-    position: fixed;
-    bottom: 25px;
-    left: 38vw;
-    border-radius: 10px;
-    font-size: 1.15rem;
+    /*  */
     padding: 5px;
     width: 7rem;
   }
@@ -530,5 +556,24 @@ h3 {
     height: 130px;
     margin-left: 7px;
     margin-right: 7px;
+  }
+  .sign-up-main {
+    width: 100vw;
+  }
+}
+
+/* ---------------------------------------------LOCK IN PORTRAIT FOR SMART PHONE */
+/* 
+
+*/
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .turnDeviceNotification {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
   }
 }

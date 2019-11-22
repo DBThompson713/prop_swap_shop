@@ -14,3 +14,14 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+// Hide Header on on scroll down
+
+// $(window).on("scroll", function() {
+//   if ($(window).scrollTop() > 30) {
+//     $(".page-top").addClass("active");
+//   } else {
+//     //remove the background property so it comes transparent again (defined in your css)
+//     $(".page-top").removeClass("active");
+//   }
+// });
