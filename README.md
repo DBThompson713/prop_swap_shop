@@ -151,25 +151,21 @@ Due to time constraints I was unable to get this feature included in this versio
 <h3><strong>Model (R17)</strong></h3>
 <p>Prop Swap makes use of the following models</p>
 <ul>
-<li>plant model</li>
-<p>The plant model handles the information about the plants that are for sale. That information includes: name, proper name, price, description, plant type, sold and user_id. It has a has_one_attached :picture relationship. That picture is stored on amazon S3
+<li><strong>plant model</strong></li>
+<p>The plant model handles the information about the plants that are for sale. That information includes: name, proper name, price, description, plant type, sold and user_id. It has a has_one_attached :picture relationship. The plant pictures are stored on amazon S3.
+
+<li><strong>profile</strong></li>
+<p>
+The profile model handles the information which relates to the users personal information. The profile belongs_to :user, and has_one_attached :picture. The information being handled by this model includes: first_name, last_name, address, suburb, post_code, state and user_id. user_id is the what connects user to the profile. The user_id is also used to connect a user to the "swaps" that they create. The profile picture is stored on amazon S3.
+</p>
+
+<li><strong>user</strong></li>
+<p>
+    The user model is is authenticated through devise. The user model has_one :profile, and has_many :plants. Once a user is logged in, they have one profile, and that user can create as many plants for sale as they like.
+</p>
 
 </ul>
-<li>profile</li>
-<li>users</li>
-<li></li>
-<li></li>
 
-</ul>
-
-
-
-User
-Profile
-Crawl
-Location
-Review
-Attendee
 
 
 <h3><strong>R15	Explain the different high-level components (abstractions) in your app</strong></h3>
