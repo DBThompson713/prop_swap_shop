@@ -10,16 +10,8 @@
                 background-image: url('<%= rails_blob_url(plant.picture) %>');
                 background-size: cover;
                 ">
-
-
                 <div class="plant-info">
-
-
-
-
   <h3><%= plant.name %></h3>
-
-
   <button data-stripe="payment">Buy <%= number_to_currency(plant.price / 100.0) %></button>
   
   </div>

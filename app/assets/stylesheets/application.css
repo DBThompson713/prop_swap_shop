@@ -344,7 +344,8 @@ h3 {
   /* background: rgba(255, 255, 255, 0.9); */
 }
 
-.show-profile-link {
+.show-profile-link,
+.show-profile-link a {
   color: #fff;
   text-shadow: 1px 1px #000;
 }
@@ -512,11 +513,14 @@ h3 {
   }
 
   .showing-all-plants-mobile {
-    width: 80vw;
+    width: 100vw;
     display: flex;
     margin: 30px auto;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .showing-all-plants {
+    width: 100vw;
   }
 }
 
