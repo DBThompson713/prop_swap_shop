@@ -26,34 +26,47 @@
     </h1>
     
 
-<section class="showing-all-plants" >
+<section class="showing-all-plants-home" >
         <% @plants.order(id: :desc).limit(3).each do |plant| %>
             <%= link_to(plant) do %>
-
-
                 <div class="individual-plant-show-all" 
                 style="
                 background-image: url('<%= rails_blob_url(plant.picture) %>');
                 background-size: cover;
                 ">
-
-
                 <div class="plant-info">
-
-
-
-
   <h3><%= plant.name %></h3>
-
-
   <button data-stripe="payment">Buy <%= number_to_currency(plant.price / 100.0) %></button>
-  
   </div>
                     
                 </div>
             <% end %>
         <% end %>
     </section>
+
+
+
+<section class="showing-all-plants-mobile" >
+        <% @plants.order(id: :desc).limit(2).each do |plant| %>
+            <%= link_to(plant) do %>
+                <div class="individual-plant-show-all" 
+                style="
+                background-image: url('<%= rails_blob_url(plant.picture) %>');
+                background-size: cover;
+                ">
+                <div class="plant-info">
+  <h3><%= plant.name %></h3>
+  <button data-stripe="payment">Buy <%= number_to_currency(plant.price / 100.0) %></button>
+  </div>
+                    
+                </div>
+            <% end %>
+        <% end %>
+    </section>
+
+
+
+    
 
 
 
