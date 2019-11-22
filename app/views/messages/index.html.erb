@@ -1,0 +1,12 @@
+
+<h1 class= "coming-soon">Messaging Coming Soon!</h1>
+<ul>
+  <% @messages.each do |message| %>
+    <% if message.body %>
+      <li>
+        <h4><%= message.user.username %></h4>
+        <p><%= message.body %></p>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

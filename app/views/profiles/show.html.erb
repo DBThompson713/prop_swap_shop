@@ -31,7 +31,7 @@
     <% if current_user.id == @profile.user_id %>
       <%= link_to "Update Profile", edit_profile_path(@profile) if current_user.id == @profile.user_id %> 
     <% else %>
-      <p>Send a message</p>
+      <p><%= link_to "Send a message", messages_index_path%></p>
     <% end%>
   
 </div>

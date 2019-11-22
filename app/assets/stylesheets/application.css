@@ -59,6 +59,10 @@ h3 {
   text-shadow: 2px 2px #000;
 }
 
+.coming-soon {
+  margin-top: 200px;
+}
+
 .white-text a {
   color: #fff;
   text-shadow: 1px 1px #000;

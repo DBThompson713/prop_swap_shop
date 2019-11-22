@@ -6,7 +6,6 @@ class PaymentsController < ApplicationController
         plant_id = params[:plantId]
         p params
         Plant.find(plant_id).update(sold: true)
-        p "plant #{plant_id} has been purchased"
     end
 
     def webhook
