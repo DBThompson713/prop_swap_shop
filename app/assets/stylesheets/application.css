@@ -41,7 +41,7 @@ html {
   display: none;
 }
 .page-top {
-  position: sticky;
+  position: relative;
   top: 0;
 }
 
