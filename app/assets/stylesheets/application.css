@@ -232,10 +232,12 @@ footer a:visited {
 
 .showing-all-plants-home {
   width: 80vw;
+  height: 100px;
   display: flex;
-  margin: 30px auto;
+  margin: 10px auto;
   flex-wrap: nowrap;
   justify-content: center;
+  padding-bottom: 10px;
 }
 .showing-all-plants {
   width: 80vw;
@@ -252,7 +254,8 @@ footer a:visited {
 
 .individual-plant-show-all {
   padding: 20px;
-  width: 150px;
+  width: 160px;
+  height: 110px;
   margin: 10px 10px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.95);
