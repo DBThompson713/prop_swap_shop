@@ -31,7 +31,7 @@
 <section class="showing-all-plants-home" >
         <% @plants.order(id: :desc).limit(3).each do |plant| %>
             <%= link_to(plant) do %>
-                <div class="individual-plant-show-all" 
+                <div class="individual-plant-show-all-home" 
                 style="
                 background-image: url('<%= rails_blob_url(plant.picture) %>');
                 background-size: cover;

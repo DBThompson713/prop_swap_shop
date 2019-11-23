@@ -254,8 +254,18 @@ footer a:visited {
 
 .individual-plant-show-all {
   padding: 20px;
+  width: 200px;
+  height: 150px;
+  margin: 10px 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 99;
+}
+
+.individual-plant-show-all-home {
+  padding: 20px;
   width: 160px;
-  height: 110px;
+  height: 100px;
   margin: 10px 10px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.95);
