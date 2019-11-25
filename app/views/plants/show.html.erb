@@ -33,14 +33,31 @@
 
 <p>
   
+
+
+<% if current_user.id == @plant.user_id%> 
+    <p>Would you like to change your swap?</p>
+    <% else %>
   <%= link_to "View Swapper's profile", profile_path(@plant.user_id)  %>
-</p>
+  <% end %>
+
+
+
+
+
+
   
+</p>
+  <% if current_user.id == @plant.user_id%> 
+    <%= link_to "Edit Swap", edit_plant_path(@plant) if current_user.id == @plant.user_id %> 
+<%= link_to '| Delete Swap', @plant, method: :delete, data: { confirm: 'Are you sure you want to delete?' } if current_user.id == @plant.user_id%>
+    <% else %>
   <div class="payment-button">
     <button data-stripe="payment">Buy <%= number_to_currency(@plant.price / 100.0) %></button>
 </div>
-<%= link_to "Edit Swap", edit_plant_path(@plant) if current_user.id == @plant.user_id %> 
-<%= link_to '| Delete Swap', @plant, method: :delete, data: { confirm: 'Are you sure you want to delete?' } if current_user.id == @plant.user_id%>
+  <% end %>
+  
+
 
 
 
