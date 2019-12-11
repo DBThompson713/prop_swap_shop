@@ -1,5 +1,7 @@
 {
   "name": "prop_swap",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "puma", ">= 3.12.2"
+  }
 }
